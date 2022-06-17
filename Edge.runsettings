@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <LegacySettings>
+    <Execution>
+      <Timeouts testTimeout="3600000"/>
+    </Execution>
+  </LegacySettings>
+  <RunConfiguration>
+    <MaxCpuCount>1</MaxCpuCount>
+    <ResultsDirectory>.\TestResults</ResultsDirectory>
+    <TargetPlatform>x86</TargetPlatform>
+    <TargetFrameworkVersion>netcoreapp3.1</TargetFrameworkVersion>
+    <!--TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>-->
+    <TestSessionTimeout>3600000</TestSessionTimeout>
+    <TreatNoTestsAsError>true</TreatNoTestsAsError>
+    <EnvironmentVariables>
+
+    </EnvironmentVariables>
+  </RunConfiguration>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Configuration>
+          <CodeCoverage>
+            <ModulePaths>
+              <Exclude>
+                <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
+              </Exclude>
+            </ModulePaths>
+            <!-- We recommend you do not change the following values: -->
+            <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+            <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+            <CollectFromChildProcesses>True</CollectFromChildProcesses>
+            <CollectAspDotNet>False</CollectAspDotNet>
+
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>
+
+      <!--<DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+				<Configuration>
+					<MediaRecorder sendRecordedMediaForPassedTestCase="true"  xmlns="">
+						<ScreenCaptureVideo bitRate="1024" frameRate="8" quality="50" />​
+					</MediaRecorder>​
+				</Configuration>
+			</DataCollector>-->
+
+      <DataCollector friendlyName="blame" enabled="True">
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+  <TestRunParameters>
+    <!--webBrowser  InternetExplorer = 0,Firefox = 1, Chrome = 2, Safari = 3, Edge = 4-->
+    <!--mainBranch  Global = 0, EU = 1, AU = 2,-->
+    <Parameter name="webBrowser" value="4" />
+    <Parameter name="app_url" value="https://responsivefight.herokuapp.com/" />
+    <Parameter name="user_name" value="Lucy2539991" />
+    <Parameter name="app_pwd" value="1234.com" />
+    <Parameter name="existing_user_name" value="Fortuna151" />
+    <Parameter name="existing_pwd" value="1234.com" />
+    <Parameter name="expected_score" value="2210" />
+
+  </TestRunParameters>
+
+  <LoggerRunSettings>
+    <Loggers>
+      <Logger friendlyName="console" enabled="True">
+        <Configuration>
+          <Verbosity>quiet</Verbosity>
+        </Configuration>
+      </Logger>
+      <Logger friendlyName="trx" enabled="True">
+        <Configuration>
+          <LogFileName>www.responsivefight.tests.trx</LogFileName>
+        </Configuration>
+      </Logger>
+      <Logger friendlyName="html" enabled="True">
+        <Configuration>
+          <LogFileName>www.responsivefight.tests.html</LogFileName>
+        </Configuration>
+      </Logger>
+      <Logger friendlyName="blame" enabled="True" />
+    </Loggers>
+  </LoggerRunSettings>
+  <MSTest>
+    <MapInconclusiveToFailed>True</MapInconclusiveToFailed>
+    <CaptureTraceOutput>true</CaptureTraceOutput>
+    <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+    <DeploymentEnabled>False</DeploymentEnabled>
+    <AssemblyResolution>
+      <Directory path="www.responsivefight.tests" includeSubDirectories="false"/>
+    </AssemblyResolution>
+  </MSTest>
+
+</RunSettings>
