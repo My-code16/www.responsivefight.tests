@@ -12,12 +12,12 @@ This test log in the application with already registered user and tries to achie
 
 **Run paramaters**
 
-<webBrowser>  - InternetExplorer = 0,Firefox = 1, Chrome = 2, Safari = 3, Edge = 4 (these are the codes for the particular browsers
-<user_name>  - "Enter your desired name" 
-<app_pwd>	- "Enter your password"
-<existing_user_name> - " Enter existing user name"
-<existing_pwd> - " Enter existing user name"
-<expected_score> -" Enter desired score to achieve" ( based on the entered score system will continue until it reaches it)
+webBrowser - InternetExplorer = 0,Firefox = 1, Chrome = 2, Safari = 3, Edge = 4 (these are the codes for the particular browsers).
+user_name  - "Enter your desired name" .
+app_pwd	- "Enter your password"
+existing_user_name - " Enter existing user name"
+existing_pwd - " Enter existing user name"
+expected_score -" Enter desired score to achieve" ( based on the entered score system will continue until it reaches it)
 
 Note: Currently I have used given values for the above parameters. In order to try with new ones , need to change the run settings , rebuild and execute the code. 
 
